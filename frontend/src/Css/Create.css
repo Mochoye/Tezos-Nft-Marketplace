@@ -1,0 +1,40 @@
+/* CreateSection.css */
+
+.create-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .create-title {
+    text-align: center;
+  }
+  
+  .create-form {
+    margin-top: 20px;
+  }
+  
+  .create-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .create-form-label {
+    font-weight: bold;
+  }
+  
+  .create-form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .create-form-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a0ff;
+    color: white;
+  }
+  
