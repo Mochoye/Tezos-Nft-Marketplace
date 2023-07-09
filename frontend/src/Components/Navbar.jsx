@@ -21,17 +21,17 @@ const Navbar = () => {
         
         <li>
           <a href="#" className="nav-link px-2 text-white">
-            Pricing
+            Create
           </a>
         </li>
         <li>
           <a href="#" className="nav-link px-2 text-white">
-            FAQs
+          Mint
           </a>
         </li>
         <li>
           <a href="#" className="nav-link px-2 text-white">
-            About
+            Contact Us
           </a>
         </li>
       </ul>
@@ -46,9 +46,6 @@ const Navbar = () => {
       <div className="text-end">
         <button type="button" className="btn btn-outline-light me-2">
           Login
-        </button>
-        <button type="button" className="btn btn-warning">
-          Sign-up
         </button>
       </div>
     </div>
