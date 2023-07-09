@@ -1,18 +1,16 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
+
+import Footer from './Components/Footer'
 import Card from './Components/Card'
+
 
 const App = () => {
   return (
     <>
      <Navbar/>
-     <div className="d-flex justify-content-around flex-wrap">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div> 
+      <Card/>
+      <Footer/>
     </>
   )
 }
