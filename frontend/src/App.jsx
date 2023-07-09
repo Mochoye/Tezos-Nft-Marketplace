@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Navbar from './Components/Navbar'
 
@@ -12,7 +13,7 @@ const App = () => {
       <Card/>
       <Footer/>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
