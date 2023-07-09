@@ -1,0 +1,58 @@
+/* Mint.css */
+
+.mint-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .mint-card {
+    width: 600px;
+    max-width: 90%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .mint-title {
+    text-align: center;
+  }
+  
+  .mint-form {
+    margin-top: 20px;
+  }
+  
+  .mint-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .mint-form-label {
+    font-weight: bold;
+  }
+  
+  .mint-form-input {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .mint-form-input:focus {
+    outline: none;
+  }
+  
+  .mint-form-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a0ff;
+    color: white;
+  }
+  
+  .mint-status {
+    margin-top: 10px;
+  }
+  
