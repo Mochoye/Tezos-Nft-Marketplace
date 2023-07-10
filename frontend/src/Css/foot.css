@@ -1,7 +1,7 @@
 .footer{
     padding: 50px 15% 10px;
-    border-top: 6px solid #333;
-    background-color: rgb(69, 27, 69);
+    /* border-top: 6px solid #333; */
+    background-color:black;
     display: block;
     background-size: cover;
     
@@ -21,7 +21,7 @@
 .footer .col a{
     display: block;
     text-decoration: none;
-    color:black;
+    color:white;
     font-size: 14px;
     margin-bottom: 10px;
 }

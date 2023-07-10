@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Css/help.css";
+import ContactForm from "./ContactForm";
 
 function Help() {
 
@@ -56,6 +57,7 @@ function Help() {
           </div>
         ))}
       </div>
+      
     </div>
   );
 }
