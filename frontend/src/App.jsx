@@ -1,21 +1,19 @@
-
+import React from "react";
 import Navbar from "./Components/Navbar";
-import Card from "./Components/Card";
-import Carousel from "./Components/carousel";
+import Footer from './Components/Footer'
+
+
+import { Outlet } from "react-router-dom";
+
+
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Carousel />
-      <div className="d-flex justify-content-around flex-wrap">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
       
+      <Outlet />
+      <Footer/>
     </>
   );
 };

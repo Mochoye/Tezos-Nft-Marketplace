@@ -1,93 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
+import "../Css/Create.css";
 
-// import { Container, Row, Col } from "reactstrap";
-// import CommonSection from "../ComLayout/ui/Common-section/CommonSection";
-// import NftCard from "../ComLayout/ui/Nft-card/NftCard";
-// import img from "../assets/pics/img-01.jpg";
-// import avatar from "../assets/pics/ava-01.png";
 
-// import "../styles/create-item.css";
+function Create() {
+  
+  const [name, setName] = useState("");
 
-const item = {
-  id: "1",
-  title: "Apple",
-  desc: "Hello world",
-  imgUrl: img,
-  creator: "Lorem2",
-  creatorImg: avatar,
-  currentBid: 7.89,
-};
+  
+  const [description, setDescription] = useState("");
 
-const Create = () => {
+  
+  const [image, setImage] = useState(null);
+
+  const [price, setPrice] = useState(0);
+
+  
+  const handleImageChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log(name, description, image, price);
+    alert("NFT created successfully!");
+  };
+
   return (
-    <>
-      {/* <CommonSection title="Create Item" /> */}
+    <div className="create-section">
+      <h1 className="create-title">Create your own NFT</h1>
+      <form className="create-form" onSubmit={handleSubmit}>
+        <div className="create-form-group">
+          <label className="create-form-label" htmlFor="name">
+            Name
+          </label>
+          <input
+            className="create-form-input"
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="create-form-group">
+          <label className="create-form-label" htmlFor="description">
+            Description
+          </label>
+          <textarea
+            className="create-form-input"
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
+        </div>
+        <div className="create-form-group">
+          <label className="create-form-label" htmlFor="image">
+            Image
+          </label>
+          <input
+            className="create-form-input"
+            type="file"
+            id="image"
+            accept="image/*"
+            onChange={handleImageChange}
+            required
+          />
+        </div>
+        <div className="create-form-group">
+          <label className="create-form-label" htmlFor="price">
+            Price (in XTZ)
+          </label>
+          <input
+            className="create-form-input"
+            type="number"
+            id="price"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            min={0}
+            step={0.01}
+            required
+          />
+        </div>
+        <button className="create-form-button" type="submit">
+          Create NFT
+        </button>
+      </form>
       
-
-      <section>
-        <>
-          <Row>
-            <Col lg="3" md="4" sm="6">
-              <h5 className="mb-4 text-light">Preview Item</h5>
-              <NftCard item={item} />
-            </Col>
-
-            <Col lg="9" md="8" sm="6">
-              <div className="create__item">
-                <form>
-                  <div className="form__input">
-                    <label htmlFor="">Upload File</label>
-                    <input type="file" className="upload__input" />
-                  </div>
-
-                  <div className="form__input">
-                    <label htmlFor="">Price</label>
-                    <input
-                      type="number"
-                      placeholder="Enter price for one item (ETH)"
-                    />
-                  </div>
-
-                  <div className="form__input">
-                    <label htmlFor="">Minimum Bid</label>
-                    <input type="number" placeholder="Enter minimum bid" />
-                  </div>
-
-                  <div className=" d-flex align-items-center gap-4">
-                    <div className="form__input w-50">
-                      <label htmlFor="">Starting Date</label>
-                      <input type="date" />
-                    </div>
-
-                    <div className="form__input w-50">
-                      <label htmlFor="">Expiration Date</label>
-                      <input type="date" />
-                    </div>
-                  </div>
-
-                  <div className="form__input">
-                    <label htmlFor="">Title</label>
-                    <input type="text" placeholder="Enter title" />
-                  </div>
-
-                  <div className="form__input">
-                    <label htmlFor="">Description</label>
-                    <textarea
-                      name=""
-                      id=""
-                      rows="7"
-                      placeholder="Enter description"
-                      className="w-100"
-                    ></textarea>
-                  </div>
-                </form>
-              </div>
-            </Col>
-          </Row>
-        </>
-      </section>
-    </>
+    </div>
+    
   );
-};
+}
 
 export default Create;
