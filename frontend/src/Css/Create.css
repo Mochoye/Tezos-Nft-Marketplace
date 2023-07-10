@@ -1,9 +1,11 @@
 /* CreateSection.css */
 
 .create-section {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 100%;
+  display: block;
+  padding: 100px;
+  color: white;
+  background:black;
   }
   
   .create-title {
