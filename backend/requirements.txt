@@ -1,3 +1,0 @@
-numpy==1.25.1
-scipy==1.11.1
-smartpy==0.2.2
