@@ -16,23 +16,19 @@ const Navbar = () => {
         <li>
         
         </li>
-        <li>
+        {/* <li>
           <NavLink to='/home'  className="nav-link px-2 text-white"
           >
             Home
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to='/create'  className="nav-link px-2 text-white"
           >
             Create
           </NavLink>
         </li>
-        <li>
-        <NavLink to='/mint' className="nav-link px-2 text-white">
-          Mint
-        </NavLink>
-        </li>
+     
         <li>
         <NavLink to='/help' className="nav-link px-2 text-white">
           Help
